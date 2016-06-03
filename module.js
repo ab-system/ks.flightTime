@@ -2,8 +2,8 @@
  * Created by eolt on 08.10.2015.
  */
 
-    angular.module('components', ['ui.bootstrap', 'flightTime'])
-        .run(['upDownSettings', 'flightTimeUpDownSettings', function(upDownSettings) {
+    angular.module('components', ['ui.bootstrap', 'ks.flightTime'])
+        .run(['upDownSettings', function(upDownSettings) {
             upDownSettings.templateUrl = 'bower_components/ks.upDown/src/templates/ks.updown.bootstrap.html';
         }])
         .controller('mainCtrl', [ '$scope', function($scope) {

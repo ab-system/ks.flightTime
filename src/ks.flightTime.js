@@ -79,8 +79,8 @@
 
     angular
         .module('ks.flightTime', ['ks.upDown'])
-        .value('ks.flightTimeUpDownSettings', { templateUrl: 'src/ks.flightTime.html' })
-        .filter('ks.flightTime', function(){
+        .value('flightTimeUpDownSettings', { templateUrl: 'src/ks.flightTime.html' })
+        .filter('flightTime', function(){
             return function(input, format, units){
                 if(input) {
 
