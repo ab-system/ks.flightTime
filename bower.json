@@ -1,0 +1,25 @@
+{
+  "name": "flighttime",
+  "directory": "bower_components",
+  "version": "1.0.0",
+  "authors": [
+    "ol't egor"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+	"lodash": "~3",
+    "ks.upDown":"https://github.com/ab-system/ks.upDown.git#f1abbbf196934781a147f00902aa0f2d08e37a31"
+  },
+
+  "resolutions": {
+    "angular": "~1.5",
+    "angular-material": "~1.0"
+  }
+}

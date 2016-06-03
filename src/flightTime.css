@@ -1,0 +1,7 @@
+[up-down] {
+    display: inline-block;
+}
+
+[up-down] .form-control {
+    width: 100px
+}

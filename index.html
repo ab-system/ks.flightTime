@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="components">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="src/flightTime.css"/>
+    <title></title>
+</head>
+<body>
+
+<div class="container" ng-controller="mainCtrl">
+    <div class="row">
+        <div class="col-md-3">format</div>
+        <div class="col-md-3">model</div>
+        <div class="col-md-3">flight-time</div>
+        <div class="col-md-3">filter</div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-3 mt30">чччч.мм</div>
+        <div class="col-md-3 mt30"><span>{{hhhhmm}}</span></div>
+        <div class="col-md-3" flight-time-up-down="" format="чччч.мм" ng-model="hhhhmm"></div>
+        <div class="col-md-3">
+            {{hhhhmm | flightTime : 'чч.мм' : 'час.мин'}}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-3 mt30">чччч.мм.сс</div>
+        <div class="col-md-3 mt30"><span>{{hhhhmmss}}</span></div>
+        <div class="col-md-3" flight-time-up-down="" format="чччч.мм.сс" ng-model="hhhhmmss"></div>
+        <div class="col-md-3">
+            {{hhhhmmss | flightTime : 'чч.мм.сс' : 'час.мин.сек'}}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-3 mt30">чч.мм</div>
+        <div class="col-md-3 mt30"><span>{{hhm}}</span></div>
+        <div class="col-md-3" flight-time-up-down="" format="чч.мм" ng-model="hhm"></div>
+        <div class="col-md-3">
+            {{hhm | flightTime : 'чч.мм' : 'час.мин'}}
+        </div>
+    </div>
+
+</div>
+
+<script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+<script type="text/javascript" src="bower_components/lodash/lodash.js"></script>
+<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script type="text/javascript" src="bower_components/angular/angular.js"></script>
+<script type="text/javascript" src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<script type="text/javascript" src="bower_components/ks.upDown/src/ks.upDown.js"></script>
+
+<script type="text/javascript" src="module.js"></script>
+<script type="text/javascript" src="src/flightTime.js"></script>
+
+</body>
+</html>

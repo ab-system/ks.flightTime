@@ -1,0 +1,11 @@
+﻿{
+  "name": "flightTime",
+  "version": "1.0.0",
+  "description": "npm пакеты проекта",
+ 
+  "author": "",
+  
+  "devDependencies": {
+    "express": ""
+  }
+}

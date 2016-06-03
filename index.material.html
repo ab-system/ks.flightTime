@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="components">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
+    <link href="bower_components/ks.upDown/material-icons/material-icons.css" rel="stylesheet">
+    <link href="bower_components/ks.upDown/src/ks.upDown.material.css" rel="stylesheet">
+    <title></title>
+</head>
+<body>
+
+<div ng-controller="mainCtrl">
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>material</h2>
+            </div>
+        </md-toolbar>
+        <div>
+            <p>model: {{hhhhmm}}</p>
+            <p>format: чччч.мм</p>
+            <p>filter: {{hhhhmm | flightTime : 'чч.мм' : 'час.мин'}}</p>
+            <div class="layout-row" flight-time-up-down="" format="чччч.мм" ng-model="hhhhmm"></div>
+        </div>
+        <div>
+            <p>model: {{hhhhmmss}}</p>
+            <p>format: чччч.мм.сс</p>
+            <p>filter: {{hhhhmmss | flightTime : 'чч.мм.сс' : 'час.мин.сек'}}</p>
+            <div class="layout-row" flight-time-up-down="" format="чччч.мм.сс" ng-model="hhhhmmss"></div>
+        </div>
+        <div>
+            <p>model: {{hhm}}</p>
+            <p>format: чч.мм</p>
+            <p>filter: {{hhm | flightTime : 'чч.мм' : 'час.мин'}}</p>
+            <div class="layout-row" flight-time-up-down="" format="чч.мм" ng-model="hhm"></div>
+        </div>
+</div>
+
+
+<script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+<script type="text/javascript" src="bower_components/lodash/lodash.js"></script>
+<script type="text/javascript" src="bower_components/angular/angular.js"></script>
+
+<script type="text/javascript" src="bower_components/ks.upDown/src/ks.upDown.js"></script>
+<script type="text/javascript" src="bower_components/angular-animate/angular-animate.js"></script>
+<script type="text/javascript" src="bower_components/angular-aria/angular-aria.js"></script>
+<script type="text/javascript" src="bower_components/angular-material/angular-material.js"></script>
+
+<script type="text/javascript" src="module.material.js"></script>
+<script type="text/javascript" src="mainController.js"></script>
+<script type="text/javascript" src="src/flightTime.js"></script>
+
+</body>
+</html>
