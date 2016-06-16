@@ -14,8 +14,8 @@
     "tests"
   ],
   "dependencies": {
-	"lodash": "~3",
-    "ks.upDown":"https://github.com/ab-system/ks.upDown.git#f1abbbf196934781a147f00902aa0f2d08e37a31"
+	"lodash": "~4",
+    "ks.upDown":"https://github.com/ab-system/ks.upDown.git#11f7137"
   },
 
   "resolutions": {

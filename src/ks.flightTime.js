@@ -123,6 +123,7 @@
                 return input;
             }
         })
+        /*
         .directive("flightTime", [
             '$log', function ($log) {
 
@@ -148,7 +149,6 @@
                     },
 
                     link: function link(scope, element, attrs, ngModelCtrl) {
-
                         var format = scope.format;
                         var l = getPartsLength(format);
                         var totalLength = l.totalLength;
@@ -207,6 +207,7 @@
                 };
             }
         ])
+        */
         .directive("flightTimeUpDown", [
             '$log', 'flightTimeUpDownSettings', function ($log, flightTimeUpDownSettings) {
 
@@ -223,25 +224,35 @@
                     restrict: "EA",
                     require: 'ngModel',
                     scope: {
-                        format: '@'
+                        format: '@',
+                        labels: '@'
                     },
 
                     templateUrl: flightTimeUpDownSettings.templateUrl,
 
                     link: function link(scope, element, attrs, ngModelCtrl) {
 
+
+
                         var format = scope.format;
                         var l = getPartsLength(format);
-
                         var partsLength = l.partsLength;
+
+                        var labels;
+                        if(scope.labels){
+                            labels = scope.labels.split('.');
+                            if(labels.length != partsLength.length){
+                                throw "Wrong labels: " + scope.labels + " for format: " + format;
+                            }
+                        }
 
                         scope.viewModels = [];
 
-                        scope.viewModels.push({ max: getMaxInt(partsLength[0]), min: 0, value: 0, onChange: ngModelCtrl.$setViewValue });
+                        scope.viewModels.push({ label: labels ? labels[0] : null, max: getMaxInt(partsLength[0]), min: 0, value: 0, onChange: ngModelCtrl.$setViewValue });
 
                         if (partsLength.length > 1) {
                             for(var i = 0; i < partsLength.length - 1; i++){
-                                scope.viewModels.push({ max: 60, min: 0, value: 0, onChange: ngModelCtrl.$setViewValue });
+                                scope.viewModels.push({ label: labels ? labels[i + 1] : null, max: 60, min: 0, value: 0, onChange: ngModelCtrl.$setViewValue });
                             }
                         }
 

@@ -25,8 +25,9 @@
         <div>
             <p>model: {{hhhhmmss}}</p>
             <p>format: чччч.мм.сс</p>
+            <p>labels: часы.минуты.секунды</p>
             <p>filter: {{hhhhmmss | flightTime : 'чч.мм.сс' : 'час.мин.сек'}}</p>
-            <div class="layout-row" flight-time-up-down="" format="чччч.мм.сс" ng-model="hhhhmmss"></div>
+            <div class="layout-row" labels="часы.минуты.секунды" flight-time-up-down="" format="чччч.мм.сс" ng-model="hhhhmmss"></div>
         </div>
         <div>
             <p>model: {{hhm}}</p>
