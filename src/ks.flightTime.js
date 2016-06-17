@@ -123,7 +123,6 @@
                 return input;
             }
         })
-        /*
         .directive("flightTime", [
             '$log', function ($log) {
 
@@ -298,4 +297,4 @@
                 };
             }
         ]);
-})()
+})();
